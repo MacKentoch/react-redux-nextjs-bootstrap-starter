@@ -4,6 +4,13 @@
   "description": "react + redux + next js + bootstrap starter",
   "author": "Erwan DATIN (http://www.erwan-datin.com)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MacKentoch/react-redux-nextjs-bootstrap-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MacKentoch/react-redux-nextjs-bootstrap-starter/issues"
+  },
   "keywords": [
     "react",
     "next",
