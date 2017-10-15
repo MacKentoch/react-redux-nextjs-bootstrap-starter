@@ -1,0 +1,60 @@
+{
+  "name": "react-redux-nextjs-bootstrap-starter",
+  "version": "0.0.1",
+  "description": "react + redux + next js + bootstrap starter",
+  "author": "Erwan DATIN (http://www.erwan-datin.com)",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "next",
+    "zeit",
+    "next.js",
+    "next js",
+    "now",
+    "redux",
+    "react-redux",
+    "ES6",
+    "ES7",
+    "ES8",
+    "ES2015",
+    "ES2016",
+    "ES2017",
+    "bootstrap",
+    "starter",
+    "hot-reload"
+  ],
+  "engines": {
+    "node": ">=8.7.0",
+    "npm": ">=5.4.2"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^4.0.3",
+    "normalize.css": "^7.0.0",
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.31.3",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/next": "^2.4.3",
+    "@types/react": "^16.0.10",
+    "@types/react-bootstrap": "^0.31.4",
+    "@types/react-dom": "^16.0.1",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.8.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.57.2"
+  }
+}
