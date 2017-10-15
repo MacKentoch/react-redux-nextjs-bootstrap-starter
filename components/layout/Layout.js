@@ -32,6 +32,10 @@ class Layout extends PureComponent<Props, State> {
             rel="stylesheet"
             href="static/css/bootstrap.min.css"
           />
+          <link
+            rel="icon"
+            href="static/favicon.ico"
+          />
         </Head>
         <style
           jsx

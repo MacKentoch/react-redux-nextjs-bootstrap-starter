@@ -2,9 +2,11 @@
 
 # Next JS + React + Redux + Bootstrap starter
 
-Next JS starter 
+> A NextJS starter with redux and bootstrap
 
-> Work in progress!!!
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/Mp96tCWH2KdajZuBzqB6jwj8/MacKentoch/react-redux-nextjs-bootstrap-starter'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/Mp96tCWH2KdajZuBzqB6jwj8/MacKentoch/react-redux-nextjs-bootstrap-starter.svg' />
+</a>
 
 [See it in action deployed with `now`](https://react-redux-nextjs-bootstrap-starter-xfdpqhzseq.now.sh/)
 
