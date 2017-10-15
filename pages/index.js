@@ -13,6 +13,7 @@ type State = any;
 // #endregion
 
 class Index extends PureComponent<Props, State> {
+  // #region component lifecycle methods
   render() {
     return (
       <Layout>
@@ -29,6 +30,7 @@ class Index extends PureComponent<Props, State> {
       </Layout>
     );
   }
+  // #endregion
 }
 
 export default Index;

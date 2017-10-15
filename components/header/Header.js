@@ -5,8 +5,8 @@ import Link               from 'next/link';
 import Navbar             from 'react-bootstrap/lib/Navbar';
 import Nav                from 'react-bootstrap/lib/Nav';
 import NavItem            from 'react-bootstrap/lib/NavItem';
-import NavDropdown        from 'react-bootstrap/lib/NavDropdown';
-import MenuItem           from 'react-bootstrap/lib/MenuItem';
+// import NavDropdown        from 'react-bootstrap/lib/NavDropdown';
+// import MenuItem           from 'react-bootstrap/lib/MenuItem';
 import { PureComponent }  from 'react';
 // #endregion
 
@@ -16,9 +16,11 @@ type State = any;
 // #endregion
 
 class Header extends PureComponent<Props, State> {
+  // #region component lifecycle methods
   render() {
     return (
       <Navbar
+        inverse
         collapseOnSelect
         fluid
       >
@@ -63,6 +65,7 @@ class Header extends PureComponent<Props, State> {
       </Navbar>
     );
   }
+  // #endregion
 }
 
 export default Header;

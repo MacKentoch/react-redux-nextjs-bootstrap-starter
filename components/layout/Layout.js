@@ -7,13 +7,14 @@ import Head               from 'next/head';
 
 // #region flow types
 type Props = {
-  children: ReactElement
+  children: ReactNode
 }
 
 type State = any;
 // #endregion
 
 class Layout extends PureComponent<Props, State> {
+  // #region component lifecycle methods
   render() {
     const { children } = this.props;
 
@@ -49,6 +50,7 @@ class Layout extends PureComponent<Props, State> {
       </div>
     );
   }
+  // #endregion
 }
 
 export default Layout;

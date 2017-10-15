@@ -14,6 +14,7 @@ type State = any;
 // #endregion
 
 class Page1 extends PureComponent<Props, State> {
+  // #region component lifecycle methods
   render() {
     return (
       <Layout>
@@ -30,7 +31,9 @@ class Page1 extends PureComponent<Props, State> {
       </Layout>
     );
   }
+  // #endregion
 
+  // html elements events
   goBackHome = (
     event: SyntheticEvent<>
   ): void => {
@@ -40,6 +43,7 @@ class Page1 extends PureComponent<Props, State> {
 
     Router.push('/');
   }
+  // #endregion
 }
 
 export default Page1;
