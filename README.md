@@ -1,3 +1,5 @@
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/MacKentoch/react-redux-nextjs-bootstrap-starter)
+
 # Next JS + React + Redux + Bootstrap starter
 
 Next JS starter 
