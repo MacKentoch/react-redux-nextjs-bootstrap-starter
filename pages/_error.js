@@ -25,7 +25,7 @@ type NextInitialProps = {
 // #endregion
 
 class Error extends PureComponent<Props, State> {
-  // #region next props initialization
+  // #region props initialization
   static getInitialProps = (
     {res, xhr}: NextInitialProps
   ) => {

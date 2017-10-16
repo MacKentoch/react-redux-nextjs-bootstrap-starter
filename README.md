@@ -8,22 +8,49 @@
   <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/Mp96tCWH2KdajZuBzqB6jwj8/MacKentoch/react-redux-nextjs-bootstrap-starter.svg' />
 </a>
 
+<a target='_blank' href='https://react-redux-nextjs-bootstrap-starter-xfdpqhzseq.now.sh'>
+
+![preview](./preview.png)
+</a>
+
+
 [See it in action deployed with `now`](https://react-redux-nextjs-bootstrap-starter-xfdpqhzseq.now.sh/)
 
 ## Usage
 
-### install
-
-Clone this repository, then install dependencies:
+### Install
 
 ```bash
 npm install
 ```
 
-### run
+### Scripts
 
 <details>
   <summary>run dev with hot reload</summary>
+
+  Clone this repository, then install dependencies:
+
+  ```bash
+  npm run start
+  ```
+
+</details>
+
+<details>
+  <summary>build dev bundle</summary>
+
+  ```bash
+  npm run build
+  ```
+
+</details>
+
+<details>
+  <summary>start dev (no hot reload)</summary>
+
+
+  *NOTE: ensure you built first before starting*
 
   ```bash
   npm run start
