@@ -4,11 +4,14 @@
 import { PureComponent }      from 'react';
 import { bindActionCreators } from 'redux';
 import withRedux              from 'next-redux-wrapper';
-import configureStore         from '../redux/store/configureStore.dev';
+import configureStore         from '../redux/store/configureStore';
+import * as fakeFetchActions  from '../redux/modules/fakeModuleWithFetch';
+import * as userAuthActions   from '../redux/modules/userAuth';
 import Layout                 from '../components/layout/Layout';
 import Header                 from '../components/header/Header';
 import Jumbotron              from 'react-bootstrap/lib/Jumbotron';
-import * as fakeFetchActions  from '../redux/modules/fakeModuleWithFetch';
+import Button                 from 'react-bootstrap/lib/Button';
+import Router                 from 'next/router';
 // #endregion
 
 // #region flow types
@@ -17,6 +20,9 @@ type Props = {
   isFetching: boolean;
   fakeData: any,
   fakeFetchIfNeeded: () => Promise<any>,
+  // userAuth:
+  isAuthenticated: boolean,
+  disconnectUser: () => any,
   ...any
 };
 
@@ -51,9 +57,9 @@ class Index extends PureComponent<Props, State> {
       } = response;
       // NOTE: you will see this log in your server console (where you `npm run dev`):
       /* eslint-disable no-console */
-      console.log(`${SIDE} - fake fetch result: `, data);
+      console.log(`getInitialProps - ${SIDE} - fake fetch result: `, data);
     } catch (error) {
-      console.error(`${SIDE} - fake fetch failed: `, error);
+      console.error(`getInitialProps - ${SIDE} - fake fetch failed: `, error);
       /* eslint-enable no-console */
     }
   };
@@ -74,9 +80,9 @@ class Index extends PureComponent<Props, State> {
       } = response;
       // NOTE: you will see this log in your browser console:
       /* eslint-disable no-console */
-      console.log('FRONT SIDE - fake fetch result: ', data);
+      console.log('componentDidMount - FRONT SIDE - fake fetch result: ', data);
     } catch (error) {
-      console.error('FRONT SIDE - fake fetch failed: ', error);
+      console.error('componentDidMount - FRONT SIDE - fake fetch failed: ', error);
       /* eslint-enable no-console */
     }
   }
@@ -92,10 +98,27 @@ class Index extends PureComponent<Props, State> {
             <h1>
               Next JS + React + Redux + Bootstrap STARTER
             </h1>
+            <Button
+              bsStyle="primary"
+              onClick={this.goLogin}
+            >
+             login
+            </Button>
           </Jumbotron>
         </div>
       </Layout>
     );
+  }
+  // #endregion
+
+  // # region go login click
+  goLogin = (
+    event: SyntheticEvent<>
+  ) => {
+    if (event) {
+      event.preventDefault();
+      Router.push('/login');
+    }
   }
   // #endregion
 }
@@ -106,7 +129,9 @@ const mapStateToProps = (
 ) => ({
   // fakeModuleWithFetch:
   isFetching: state.fakeModuleWithFetch.isFetching,
-  fakeData:   state.fakeModuleWithFetch.data
+  fakeData:   state.fakeModuleWithFetch.data,
+  // userAuth:
+  isAuthenticated: state.userAuth.isAuthenticated
 });
 
 const mapDispatchToProps = (
@@ -116,7 +141,9 @@ const mapDispatchToProps = (
     ...bindActionCreators(
       {
         // fakeModuleWithFetch:
-        ...fakeFetchActions
+        ...fakeFetchActions,
+        // userAuth:
+        ...userAuthActions
       },
       dispatch)
   };

@@ -1,6 +1,6 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/MacKentoch/react-redux-nextjs-bootstrap-starter)
 
-# Next JS + React + Redux + Bootstrap starter
+# Next JS + React + Redux + Redux persist + redux-devtools-extension + Bootstrap starter
 
 > A NextJS starter with redux and bootstrap
 
@@ -16,7 +16,31 @@
 
 [See it in action deployed with `now`](https://react-redux-nextjs-bootstrap-starter-xfdpqhzseq.now.sh/)
 
+## Detailed Content
+
+**Front:**
+- Next js (4.x+ [github :link:](https://github.com/zeit/next.js))
+- React JS (16.x+ - [github :link:](https://github.com/facebook/react))
+- redux (*as your application grows managing state will be a serious concern, save pain with Redux*)
+- redux-persist (*simplifies your NextJS state share between pages* [github :link:](https://github.com/rt2zz/redux-persist))
+- react-redux (*Redux is not specific to ReactJS, you could easily use it with Angular2 for instance*)
+- redux-thunk (*simple and does the job*)
+- next-redux-wrapper
+- redux-devtools-extension ([github :link:](https://github.com/zalmoxisus/redux-devtools-extension#redux-devtools-extension))
+- react-bootstrap ([github :link:](https://github.com/react-bootstrap/react-bootstrap))
+- axios ([github :link:](https://github.com/mzabriskie/axios) *Why: simple, complete, isomorphic ...*)
+
+**Tool chain:**
+- Next js (4.x+ [github :link:](https://github.com/zeit/next.js))
+- Flow JS types
+
 ## Usage
+
+IMPORTANT: `Next JS` when `redux` connected 
+
+- **you are forced to connect each page** (*even if you don't need redux in that page*) with `withRedux` from `next-redux-wrapper` (*[see page1 as an example](https://github.com/MacKentoch/react-redux-nextjs-bootstrap-starter/blob/master/pages/page1.js)*).
+- **each sub component you may want to connect** should be connected by usual `connect` from `redux` (*[see Header component as an example](https://github.com/MacKentoch/react-redux-nextjs-bootstrap-starter/blob/master/components/header/Header.js)*)
+
 
 ### Install
 

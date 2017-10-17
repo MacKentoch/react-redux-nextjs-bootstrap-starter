@@ -30,7 +30,12 @@ class Layout extends PureComponent<Props, State> {
           />
           <link
             rel="stylesheet"
-            href="static/css/bootstrap.min.css"
+            // href="static/css/bootstrap.min.css"
+            href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css"
+          />
+          <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           />
           <link
             rel="icon"
