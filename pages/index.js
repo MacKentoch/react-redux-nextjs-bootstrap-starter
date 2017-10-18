@@ -42,10 +42,10 @@ type InitialProps = {
 
 class Index extends PureComponent<Props, State> {
   // #region props initialization
-  static getInitialProps = async ({
+  static async getInitialProps({
     isServer,
     store
-  }: InitialProps) => {
+  }: InitialProps) {
     const SIDE = isServer ? 'SERVER SIDE' : 'FRONT SIDE';
 
     try {

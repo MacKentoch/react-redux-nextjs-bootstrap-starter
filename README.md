@@ -23,6 +23,7 @@
 - React JS (16.x+ - [github :link:](https://github.com/facebook/react))
 - redux (*as your application grows managing state will be a serious concern, save pain with Redux*)
 - redux-persist (*simplifies your NextJS state share between pages* [github :link:](https://github.com/rt2zz/redux-persist))
+- localforage (*for better performances than localStorage*)
 - react-redux (*Redux is not specific to ReactJS, you could easily use it with Angular2 for instance*)
 - redux-thunk (*simple and does the job*)
 - next-redux-wrapper

@@ -1,3 +1,6 @@
+## 0.3.0 (RELEASED)
+- add localforage
+
 ## 0.2.0 (RELEASED)
 - add Private component to handle private page
 
