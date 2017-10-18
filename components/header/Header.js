@@ -69,11 +69,22 @@ class Header extends PureComponent<Props, State> {
                 Page1
               </NavItem>
             </Link>
+            <Link
+              prefetch
+              href="/private1"
+            >
+              <NavItem
+                eventKey={2}
+                href="#"
+              >
+                Private1
+              </NavItem>
+            </Link>
             {
               isAuthenticated
                 ?
                 <NavItem
-                  eventKey={2}
+                  eventKey={3}
                   href="#"
                   onClick={this.HandlesDisconnectUser}
                 >
@@ -88,7 +99,7 @@ class Header extends PureComponent<Props, State> {
                   href="/login"
                 >
                   <NavItem
-                    eventKey={2}
+                    eventKey={3}
                     href="#"
                   >
                     <i

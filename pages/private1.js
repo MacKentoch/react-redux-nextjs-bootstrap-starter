@@ -10,10 +10,18 @@ import Layout                 from '../components/layout/Layout';
 import Header                 from '../components/header/Header';
 import Button                 from 'react-bootstrap/lib/Button';
 import Router                 from 'next/router';
+import Private                from '../components/privateRoute/PrivateRoute';
 // #endregion
 
 // #region flow types
 type Props = {
+  // from next/Router:
+  url: {
+    asPath: string,
+    pathname: string,
+    ...any
+  },
+
   // userAuth:
   isAuthenticated: boolean,
   disconnectUser: () => any,
@@ -23,22 +31,32 @@ type Props = {
 type State = any;
 // #endregion
 
-class Page2 extends PureComponent<Props, State> {
+class Private1 extends PureComponent<Props, State> {
   // #region component lifecycle methods
   render() {
+    const {
+      url: {
+        pathname
+      }
+    } = this.props;
+
     return (
-      <Layout>
-        <Header />
-        <h2>
-          Page2 here
-        </h2>
-        <Button
-          bsStyle="primary"
-          onClick={this.goBackHome}
-        >
-          go back home
-        </Button>
-      </Layout>
+      <Private
+        fromPath={pathname}
+      >
+        <Layout>
+          <Header />
+          <h2>
+            Private1 here
+          </h2>
+          <Button
+            bsStyle="primary"
+            onClick={this.goBackHome}
+          >
+            go back home
+          </Button>
+        </Layout>
+      </Private>
     );
   }
   // #endregion
@@ -83,4 +101,4 @@ export default withRedux(
   configureStore,
   mapStateToProps,
   mapDispatchToProps
-)(Page2);
+)(Private1);

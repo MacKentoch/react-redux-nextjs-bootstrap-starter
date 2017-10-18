@@ -16,12 +16,21 @@ import auth                   from '../services/auth';
 
 // #region flow types
 type Props = {
+  // next/route:
+  url: {
+    // query.from sent by Private component when user auth failed
+    query?: {
+      from?: string
+    }
+  },
+
   // userAuth:
   isAuthenticated: boolean,
   isFetching: boolean,
   isLogging: boolean,
   disconnectUser: () => string,
   logUserIfNeeded: (user: string) => any,
+
   ...any
 };
 
@@ -212,7 +221,10 @@ class Login extends PureComponent<Props, State> {
     }
 
     const {
-      logUserIfNeeded
+      logUserIfNeeded,
+      url: {
+        query
+      }
     } = this.props;
 
     const {
@@ -237,6 +249,12 @@ class Login extends PureComponent<Props, State> {
       auth.setToken(token);
       auth.setUserInfo(user);
 
+      // test if we were redirected to login from a private page, redirect back to where we were:
+      if (query.from) {
+        return Router.push({ pathname: query.from }); // back to Home
+      }
+
+      // redirect to home otherwise:
       Router.push({ pathname: '/' }); // back to Home
     } catch (error) {
       /* eslint-disable no-console */

@@ -1,6 +1,6 @@
 {
   "name": "react-redux-nextjs-bootstrap-starter",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "react + redux + next js + bootstrap starter",
   "author": "Erwan DATIN (http://www.erwan-datin.com)",
   "license": "MIT",
@@ -33,7 +33,7 @@
     "hot-reload"
   ],
   "engines": {
-    "node": ">=8.7.0",
+    "node": ">=8.6.0",
     "npm": ">=5.4.2"
   },
   "main": "index.js",
