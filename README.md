@@ -4,14 +4,7 @@
 
 > A NextJS starter with redux and bootstrap
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/Mp96tCWH2KdajZuBzqB6jwj8/MacKentoch/react-redux-nextjs-bootstrap-starter'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/Mp96tCWH2KdajZuBzqB6jwj8/MacKentoch/react-redux-nextjs-bootstrap-starter.svg' />
-</a>
 
-<a target='_blank' href='https://react-redux-nextjs-bootstrap-starter-hgjlpclfbm.now.sh'>
-
-![preview](./preview.png)
-</a>
 
 
 [See it in action deployed with `now`](https://react-redux-nextjs-bootstrap-starter-xfdpqhzseq.now.sh/)
